@@ -1,2 +1,6 @@
-*.zip
 dataset_completo/
+*.zip
+*.word
+*.pdf
+*.docx
+*.xlsx
