@@ -1,5 +1,6 @@
 import zipfile
 
+# Adiciona o nome do arquivo zip a ser descompactado
 arquivo_zip = 'dataset_completo.zip'
 
 print("Descompactando o arquivo...")
