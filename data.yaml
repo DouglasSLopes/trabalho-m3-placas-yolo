@@ -3,10 +3,10 @@ train: train/images
 val: val/images
 test: test/images
 
-# Número de classes (0-9 e A-Z)
+# Número de classes
 nc: 36
 
-# Nomes das classes (Verifique se bate com o seu dataset original)
+# Nomes das classes
 names:
   [
     "0",

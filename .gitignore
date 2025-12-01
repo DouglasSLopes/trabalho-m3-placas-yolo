@@ -15,11 +15,6 @@ datasets/
 # Geralmente não subimos ela inteira para o GitHub, apenas o relatório final.
 runs/
 
-# --- Ambiente Virtual (se criar no futuro) ---
-venv/
-env/
-.env
-
 # --- Relatório ---
 *.docx
 *.pdf
