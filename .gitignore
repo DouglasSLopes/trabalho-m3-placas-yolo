@@ -1,6 +1,21 @@
-dataset_completo/
+# --- Arquivos de Sistema e IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/
+*.pyc
+
+# --- Datasets e Arquivos Gigantes ---
 *.zip
-*.word
-*.pdf
-*.docx
-*.xlsx
+dataset_completo/
+datasets/
+
+# --- Saídas do Treinamento (Pesado) ---
+# A pasta 'runs' contém todos os pesos e gráficos. 
+# Geralmente não subimos ela inteira para o GitHub, apenas o relatório final.
+runs/
+
+# --- Ambiente Virtual (se criar no futuro) ---
+venv/
+env/
+.env
