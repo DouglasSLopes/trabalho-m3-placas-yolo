@@ -1,7 +1,7 @@
 # Detecção de Caracteres em Placas Veiculares (YOLOv11)
 
 Projeto desenvolvido para a disciplina de Visão Computacional (Trabalho M3).
-O objetivo é treinar uma rede neural **YOLOv11** para identificar e reconhecer individualmente caracteres (letras e números) em placas de carros.
+O objetivo é treinar uma rede neural YOLOv11 para identificar e reconhecer individualmente caracteres (letras e números) em placas de carros (padrão Mercosul e Cinza).
 
 ## Tecnologias Utilizadas
 
@@ -11,33 +11,29 @@ O objetivo é treinar uma rede neural **YOLOv11** para identificar e reconhecer 
 
 ## Estrutura do Projeto
 
-- `dataset_completo/`: Arquivos originais (ignorados no git).
-- `datasets/`: Estrutura organizada automaticamente para o YOLO (train/val/test).
-- `runs/`: Resultados do treinamento (gráficos e pesos).
-- `main.py`: Script principal de treino e avaliação.
-- `preparar_data.py`: Script de organização e limpeza do dataset.
+- `dataset_completo/`: Arquivos originais brutos (não versionados).
+- `datasets/`: Dataset limpo e organizado automaticamente para o YOLO (train/val/test).
+- `runs/`: Resultados do treinamento (gráficos, métricas e pesos `best.pt`).
+- `main.py`: Script principal para treinamento e validação do modelo.
+- `preparar_data.py`: Script que lê os rótulos, remove duplicatas (mesmo veículo) e organiza as pastas.
+- `verificar_duplicatas.py`: Script de verificação visual das duplicatas do dataset.
 
 ## Como Executar
 
-1. **Instale as dependências:**
-   ```bash
-   pip install ultralytics
-   ```
-2. **Depois escreva o comando no Terminal:**
+**1. Instale as dependências:**
 
-   ```bash
-   python preparar_data.py
-   ```
+```bash
+pip install ultralytics
+```
 
-3. **Excecute o comando:**
-   ```bash
-   python main.py
-   ```
+## Guia de Execução Passo a Passo
 
-### Configuração do Treino Realizada
+Para garantir o funcionamento correto do treinamento e evitar erros de arquivos não encontrados ou vazamento de dados (data leakage), siga rigorosamente a ordem abaixo.
 
-- Imagens: 2.000 amostras (selecionadas aleatoriamente).
+### 1. Preparação dos Dados (Obrigatório)
 
-- Épocas: 30
+Execute este script primeiro. Ele é responsável por ler o dataset bruto, interpretar os arquivos .txt para identificar o conteúdo da placa (ex: "ABC1234"), remover duplicatas (mesmo veículo em fotos diferentes) e criar a estrutura de pastas organizada.
 
-- Modelo: YOLOv11n (Nano)
+```bash
+python preparar_data.py
+```
