@@ -7,10 +7,10 @@ def main():
 
     # 2. Treinar o modelo
     # epochs=30: Número de passadas 
-    # imgsz=640: Tamanho padrão da imagem
+    # imgsz=192: Tamanho padrão da imagem
     # plots=True: Garante que ele gere a Matriz de Confusão no final
     print("Iniciando treinamento...")
-    results = model.train(data="data.yaml", epochs=30, imgsz=640, plots=True)
+    results = model.train(data="data.yaml", epochs=30, imgsz=192, plots=True)
 
     # 3. Validar no conjunto de Teste a
     print("Avaliando no conjunto de teste...")

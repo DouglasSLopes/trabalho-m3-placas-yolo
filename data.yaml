@@ -1,4 +1,4 @@
-path: C:\Users\Douglas\Desktop\testes\datasets\placas_m2 # Caminho relativo para a pasta que criamos
+path: C:/Users/Douglas/Desktop/trabalho-m3-placas-yolo/datasets/placas_m2
 train: train/images
 val: val/images
 test: test/images
