@@ -9,7 +9,7 @@ __pycache__/
 *.zip
 dataset_completo/
 datasets/
-placas_repetidas/
+placas_duplicadas/
 
 # --- Saídas do Treinamento (Pesado) ---
 # A pasta 'runs' contém todos os pesos e gráficos. 
