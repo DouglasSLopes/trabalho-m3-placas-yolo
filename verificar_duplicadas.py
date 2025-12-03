@@ -5,7 +5,7 @@ from collections import defaultdict
 
 # --- CONFIGURAÇÕES ---
 caminho_origem = "dataset_completo/dataset"
-caminho_destino_auditoria = "placas_repetidas" # Onde será salvada as pastas organizadas
+caminho_destino_auditoria = "placas_duplicadas" # Onde será salvada as pastas organizadas
 
 # Lista de Classes (Mesma do data.yaml para tradução correta)
 CLASSES = [

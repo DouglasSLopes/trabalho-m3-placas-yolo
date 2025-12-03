@@ -83,9 +83,7 @@ def separar_dados():
     print(f"Placas REPETIDAS ignoradas: {duplicatas}")
     print(f"Placas ÚNICAS disponíveis: {len(arquivos_unicos)}")
     
-    # --- CORTE PARA 2000 IMAGENS ---
-    # Aqui garantimos que o treino será rápido
-    arquivos_finais = arquivos_unicos[:2000]
+    arquivos_finais = arquivos_unicos
     
     total = len(arquivos_finais)
     train_end = int(total * TRAIN_RATIO)
